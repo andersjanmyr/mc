@@ -1,5 +1,31 @@
 # mc - CLI for Memcached
 
+## Installation
+
+`mc` is a single binary. Install it by right-clicking and `Save as...` or with
+`curl`.
+
+### Links
+
+* [OS X](https://github.com/andersjanmyr/mc/releases/download/v1.0.0/mc-osx)
+* [Linux](https://github.com/andersjanmyr/mc/releases/download/v1.0.0/mc-linux)
+* [Windows](https://github.com/andersjanmyr/mc/releases/download/v1.0.0/mc.exe)
+
+### Curl
+
+```
+# OS X
+$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.0.0/mc-osx \
+  > /usr/local/bin/mc
+
+# Linux
+$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.0.0/mc-linux \
+  > /usr/local/bin/mc
+
+# Make executable
+$ chmod a+x /usr/local/bin/mc
+```
+
 ## Usage
 
 ```
