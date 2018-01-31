@@ -16,6 +16,7 @@ Available Commands:
   get         Gets a value from memcached
   help        Help about any command
   set         Sets a key and value in memcached
+  version     Print the version of mc
 
 Flags:
       --config string   config file (default is $HOME/.mc.yaml)
