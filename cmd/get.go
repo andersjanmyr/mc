@@ -15,11 +15,7 @@ var getCmd = &cobra.Command{
 	Long:  `Get a value from memcached by key`,
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		memcached, err := mc.Connect()
-		if err != nil {
-			fmt.Fprintln(os.Stderr, err)
-			os.Exit(1)
-		}
+		memcached := mc.Connect()
 		it, err := memcached.Get(args[0])
 		if err != nil {
 			fmt.Fprintln(os.Stderr, err)

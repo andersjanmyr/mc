@@ -2,6 +2,12 @@
 
 
 [[projects]]
+  branch = "master"
+  name = "github.com/bradfitz/gomemcache"
+  packages = ["memcache"]
+  revision = "1952afaa557dc08e8e0d89eafab110fb501c1a2b"
+
+[[projects]]
   name = "github.com/fsnotify/fsnotify"
   packages = ["."]
   revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
@@ -132,6 +138,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "0c5d19b390ef931d3e67df2a6ed2f4b0c8f440598653cc392544e6c9f03fbad0"
+  inputs-digest = "85ddeff4bc2d64c9c65cafd8b0c6b8383bdb2ee03c7d0f39dd6e04ca3f232c21"
   solver-name = "gps-cdcl"
   solver-version = 1

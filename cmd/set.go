@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/andersjanmyr/mc/pkg/mc"
-	"github.com/rainycape/memcache"
+	"github.com/bradfitz/gomemcache/memcache"
 	"github.com/spf13/cobra"
 )
 
@@ -44,11 +44,7 @@ var setCmd = &cobra.Command{
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
-		memcached, err := mc.Connect()
-		if err != nil {
-			fmt.Fprintln(os.Stderr, err)
-			os.Exit(1)
-		}
+		memcached := mc.Connect()
 		err = memcached.Set(&memcache.Item{
 			Key:        key,
 			Value:      value,
