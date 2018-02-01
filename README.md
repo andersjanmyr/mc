@@ -26,6 +26,27 @@ $ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.1.0/mc-linux \
 $ chmod a+x /usr/local/bin/mc
 ```
 
+## Examples
+
+```
+mc get foo                # Get value for key 'foo'
+mc set foo bar            # Set value for key 'foo' to 'bar'
+mc set image -f image.png # Set value for key 'image' to contents of file 'image.png'
+mc delete foo             # Delete key (and value) 'foo'
+mc deleteall              # Delete all keys
+```
+
+## Configuration
+
+Default options `--server` and `--port` can be read from a configuration file,
+default `~/.mc.yaml`.
+```
+# $HOME/.mc.yaml
+server: memcached.myhost.com
+port: 5000
+```
+Command line options will override the options if provided.
+
 ## Usage
 
 ```
@@ -100,5 +121,4 @@ Deletes all values from memcached
 Usage:
   mc deleteall [flags]
 ```
-
 
