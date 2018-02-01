@@ -9,7 +9,7 @@ import (
 
 // Connect to the configured server
 func Connect() *memcache.Client {
-	url := fmt.Sprintf("%s:%s", viper.GetString("host"), viper.GetString("port"))
+	url := fmt.Sprintf("%s:%s", viper.GetString("server"), viper.GetString("port"))
 	memcached := memcache.New(url)
 	return memcached
 }

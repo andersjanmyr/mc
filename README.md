@@ -47,8 +47,8 @@ Available Commands:
 Flags:
       --config string   config file (default is $HOME/.mc.yaml)
   -h, --help            help for mc
-      --host string     server hostname (default is localhost) (default "h")
-      --port string     server port (default is 11211) (default "p")
+  -p, --port string     server port (default "11211")
+  -s, --server string   server hostname (default "localhost")
 
 Use "mc [command] --help" for more information about a command.
 ```

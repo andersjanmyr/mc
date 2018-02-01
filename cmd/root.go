@@ -33,12 +33,11 @@ func init() {
 	cobra.OnInitialize(initConfig)
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.mc.yaml)")
-
-	rootCmd.PersistentFlags().StringVar(&host, "host", "h", "server hostname (default is localhost)")
-	rootCmd.PersistentFlags().StringVar(&port, "port", "p", "server port (default is 11211)")
-	viper.BindPFlag("host", rootCmd.PersistentFlags().Lookup("host"))
+	rootCmd.PersistentFlags().StringVarP(&host, "server", "s", "localhost", "server hostname")
+	rootCmd.PersistentFlags().StringVarP(&port, "port", "p", "11211", "server port")
+	viper.BindPFlag("server", rootCmd.PersistentFlags().Lookup("server"))
 	viper.BindPFlag("port", rootCmd.PersistentFlags().Lookup("port"))
-	viper.SetDefault("host", "localhost")
+	viper.SetDefault("server", "localhost")
 	viper.SetDefault("port", "11211")
 }
 
@@ -60,6 +59,6 @@ func initConfig() {
 	viper.AutomaticEnv() // read in environment variables that match
 
 	if err := viper.ReadInConfig(); err == nil {
-		fmt.Println("Using config file:", viper.ConfigFileUsed())
+		fmt.Fprintln(os.Stderr, "Using config file:", viper.ConfigFileUsed())
 	}
 }
