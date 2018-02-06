@@ -60,18 +60,6 @@
   version = "v1.1.0"
 
 [[projects]]
-  name = "github.com/pkg/errors"
-  packages = ["."]
-  revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
-  version = "v0.8.0"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/rainycape/memcache"
-  packages = ["."]
-  revision = "1031fa0ce2f20c1c0e1e1b51951d8ea02c84fa05"
-
-[[projects]]
   name = "github.com/spf13/afero"
   packages = [
     ".",
@@ -138,6 +126,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "85ddeff4bc2d64c9c65cafd8b0c6b8383bdb2ee03c7d0f39dd6e04ca3f232c21"
+  inputs-digest = "855f032725e95c005ddceaa5ead60757c14f416db19cbb281b491e76f258146b"
   solver-name = "gps-cdcl"
   solver-version = 1
