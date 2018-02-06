@@ -20,6 +20,8 @@ var rootCmd = &cobra.Command{
 	Short: "A memcached CLI client",
 	Long: `mc is a command line client for memcached it supports the usual
 commands, such as get, set, etc.`,
+	ValidArgs: []string{"get", "set", "delete", "deleteall", "help",
+	"version", "completion"},
 }
 
 func Execute() {

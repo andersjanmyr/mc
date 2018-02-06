@@ -34,6 +34,7 @@ mc set foo bar            # Set value for key 'foo' to 'bar'
 mc set image -f image.png # Set value for key 'image' to contents of file 'image.png'
 mc delete foo             # Delete key (and value) 'foo'
 mc deleteall              # Delete all keys
+mc completion > mc.sh     # Generate bash completion
 ```
 
 ## Configuration
@@ -77,7 +78,7 @@ Use "mc [command] --help" for more information about a command.
 ### Get
 
 ```
-$ ./mc get -h
+$ mc get -h
 Get a value from memcached by key
 
 Usage:
@@ -90,7 +91,7 @@ Flags:
 ### Set
 
 ```
-$ ./mc set -h
+$ mc set -h
 Sets a key and value in memcached
 
 Usage:
@@ -105,7 +106,7 @@ Flags:
 ### Delete
 
 ```
-$ ./mc delete -h
+$ mc delete -h
 Delete a value from memcached by key
 
 Usage:
@@ -115,10 +116,20 @@ Usage:
 ### Delete All
 
 ```
-$ ./mc deleteall -h
+$ mc deleteall -h
 Deletes all values from memcached
 
 Usage:
   mc deleteall [flags]
 ```
 
+### Completion
+
+```
+$ mc completion --help
+Generates bash completion, redirect to a file and move it to your
+bash completion directory.
+
+# Example
+$ mc completion > mc_completion.sh # Copy to bash completion directory
+```
