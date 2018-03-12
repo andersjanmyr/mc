@@ -1,5 +1,9 @@
 # mc, Release Notes
 
+## Release v1.2.1
+
+* Better error reporting for errors in config file, `$HOME/.mc.yaml`.
+
 ## Release v1.2.0
 
 * Added `mc completion` command to generate bash completion.
