@@ -13,7 +13,15 @@ var (
 	cfgFile string
 	host    string
 	port    string
+	verbose bool
 )
+
+func log(args ...interface{}) {
+	if !verbose {
+		return
+	}
+	fmt.Fprintln(os.Stderr, args...)
+}
 
 var rootCmd = &cobra.Command{
 	Use:   "mc",
@@ -37,6 +45,7 @@ func init() {
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.mc.yaml)")
 	rootCmd.PersistentFlags().StringVarP(&host, "server", "s", "localhost", "server hostname")
 	rootCmd.PersistentFlags().StringVarP(&port, "port", "p", "11211", "server port")
+	rootCmd.PersistentFlags().BoolVarP(&verbose, "verbose", "v", false, "verbose output")
 	viper.BindPFlag("server", rootCmd.PersistentFlags().Lookup("server"))
 	viper.BindPFlag("port", rootCmd.PersistentFlags().Lookup("port"))
 	viper.SetDefault("server", "localhost")
@@ -61,7 +70,7 @@ func initConfig() {
 	viper.AutomaticEnv() // read in environment variables that match
 
 	if err := viper.ReadInConfig(); err == nil {
-		fmt.Fprintln(os.Stderr, "Using config file:", viper.ConfigFileUsed())
+		log("Using config file:", viper.ConfigFileUsed())
 	} else if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
 		fmt.Println(err)
 		os.Exit(1)
