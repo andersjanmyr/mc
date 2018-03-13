@@ -37,17 +37,6 @@ mc deleteall              # Delete all keys
 mc completion > mc.sh     # Generate bash completion
 ```
 
-## Configuration
-
-Default options `--server` and `--port` can be read from a configuration file,
-default `~/.mc.yaml`.
-```
-# $HOME/.mc.yaml
-server: memcached.myhost.com
-port: 5000
-```
-Command line options will override the options if provided.
-
 ## Usage
 
 ```
@@ -71,9 +60,38 @@ Flags:
   -h, --help            help for mc
   -p, --port string     server port (default "11211")
   -s, --server string   server hostname (default "localhost")
+  -v, --verbose         verbose output
 
 Use "mc [command] --help" for more information about a command.
 ```
+
+## Configuration
+
+`mc` can be configured with a configuration file, `$HOME/.mc.yaml`, and with
+environment variables.
+
+If multiple options are used, command line options has the highest priority,
+then environment variables and the configuration file has the lowest.
+
+### File ~/.mc.yaml
+
+Default options `--server` and `--port` can be read from a configuration file,
+default `~/.mc.yaml`.
+```
+# $HOME/.mc.yaml
+server: memcached.myhost.com
+port: 5000
+```
+
+### Environment variables
+
+Environment variables are also supported: `SERVER` and `PORT`.
+
+```
+SERVER=my.computer.com PORT=5000 go run main.go get dingo
+```
+
+## Extended Usage
 
 ### Get
 
