@@ -1,5 +1,9 @@
 # mc, Release Notes
 
+## Release v1.2.2
+
+* Added verbose option (`-v` or `--verbose`)
+
 ## Release v1.2.1
 
 * Better error reporting for errors in config file, `$HOME/.mc.yaml`.
