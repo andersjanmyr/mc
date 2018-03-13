@@ -71,6 +71,9 @@ func initConfig() {
 
 	if err := viper.ReadInConfig(); err == nil {
 		log("Using config file:", viper.ConfigFileUsed())
+		for _, k := range viper.AllKeys() {
+			log(k, ":", viper.Get(k))
+		}
 	} else if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
 		fmt.Println(err)
 		os.Exit(1)
