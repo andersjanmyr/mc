@@ -48,10 +48,13 @@ Usage:
   mc [command]
 
 Available Commands:
+  add         Adds a key and value if it doesn't exist
+  completion  Generates bash completion
   delete      Delete a value from memcached
   deleteall   Deletes all values from memcached
   get         Gets a value from memcached
   help        Help about any command
+  replace     Replaces a key and value if it already exist
   set         Sets a key and value in memcached
   version     Print the version of mc
 
@@ -140,6 +143,31 @@ Deletes all values from memcached
 Usage:
   mc deleteall [flags]
 ```
+
+### Add
+
+Adds a key and value if it doesn't exist
+
+Usage:
+  mc add [flags]
+
+Flags:
+  -e, --expiration int32   Expiration time for this key
+  -f, --file string        Filename containing the value
+  -h, --help               help for add
+
+### Replace
+
+Replaces a key and value if it already exist
+
+Usage:
+  mc replace [flags]
+
+Flags:
+  -e, --expiration int32   Expiration time for this key
+  -f, --file string        Filename containing the value
+  -h, --help               help for replace
+
 
 ### Completion
 
