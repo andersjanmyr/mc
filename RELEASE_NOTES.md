@@ -1,5 +1,9 @@
 # mc, Release Notes
 
+## Release v1.3.0
+
+* Added `mc add` and `mc replace` commands.
+*
 ## Release v1.2.2
 
 * Added verbose option (`-v` or `--verbose`)
