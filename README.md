@@ -1,5 +1,7 @@
 # mc - CLI for Memcached
 
+![mc-logo](./images/mc-small.png)
+
 ## Installation
 
 `mc` is a single binary. Install it by right-clicking and `Save as...` or with
