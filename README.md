@@ -1,6 +1,4 @@
-# mc - CLI for Memcached
-
-![mc-logo](./images/mc-small.png)
+# ![mc-logo](./images/mc-small.png) mc - CLI for Memcached
 
 ## Installation
 
