@@ -29,16 +29,17 @@ $ chmod a+x /usr/local/bin/mc
 ## Examples
 
 ```
-mc get foo                # Get value for key 'foo'
-mc get foo,bar            # Get values for keys 'foo' and 'bar'
-mc set foo bar            # Set value 'bar' for key 'foo'
-mc set image -f image.png # Set value for key 'image' to contents of file 'image.png'
-mc delete foo             # Delete key (and value) 'foo'
-mc deleteall              # Delete all keys
-mc add foo bar            # Add value 'bar' for key 'foo' if key doesn't exist
-mc replace foo bar        # Replace value for key 'foo' with 'bar'
-mc touch foo -e 30        # Set key 'foo's expiration time to 30 seconds
-mc completion > mc.sh     # Generate bash completion
+mc get foo                 # Get value for key 'foo'
+mc get foo,bar             # Get values for keys 'foo' and 'bar'
+mc set foo bar             # Set value 'bar' for key 'foo'
+mc set image -f image.png  # Set value for key 'image' to contents of file 'image.png'
+echo -n 'bar' | mc set foo # Sets value 'bar' for key 'foo' from stdin
+mc delete foo              # Delete key (and value) 'foo'
+mc deleteall               # Delete all keys
+mc add foo bar             # Add value 'bar' for key 'foo' if key doesn't exist
+mc replace foo bar         # Replace value for key 'foo' with 'bar'
+mc touch foo -e 30         # Set key 'foo's expiration time to 30 seconds
+mc completion > mc.sh      # Generate bash completion
 ```
 
 ## Usage

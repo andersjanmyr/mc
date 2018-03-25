@@ -1,5 +1,10 @@
 # mc, Release Notes
 
+## Release v1.4.0
+
+* Added support reading value from stdin for `set`, `add`, and `replace`.
+* `echo -n value | mc set key`
+
 ## Release v1.3.3
 
 * Clarified help texts.
