@@ -9,9 +9,8 @@ import (
 )
 
 var deleteCmd = &cobra.Command{
-	Use:   "delete",
-	Short: "Delete a value from memcached",
-	Long:  `Delete a value from memcached by key`,
+	Use:   "delete <key>",
+	Short: "Delete a value",
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		memcached := mc.Connect()

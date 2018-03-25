@@ -11,9 +11,8 @@ import (
 )
 
 var addCmd = &cobra.Command{
-	Use:   "add",
-	Short: "Adds a key and value if it doesn't exist",
-	Long:  `Adds a key and value if it doesn't exist`,
+	Use:   "add <key> [value]",
+	Short: "Adds a key and value, if it doesn't already exist",
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		key := args[0]

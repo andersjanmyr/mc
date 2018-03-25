@@ -9,7 +9,7 @@ import (
 )
 
 var touchCmd = &cobra.Command{
-	Use:   "touch key",
+	Use:   "touch <key>",
 	Short: "Touches a key (updates its expiration time)",
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {

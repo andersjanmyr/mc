@@ -14,9 +14,8 @@ var expiration int32
 var file string
 
 var setCmd = &cobra.Command{
-	Use:   "set",
-	Short: "Sets a key and value in memcached",
-	Long:  `Sets a key and value in memcached`,
+	Use:   "set <key> [value]",
+	Short: "Sets a key and value",
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		key := args[0]

@@ -1,5 +1,9 @@
 # mc, Release Notes
 
+## Release v1.3.3
+
+* Clarified help texts.
+
 ## Release v1.3.2
 
 * Added support for touching a key with `mc touch key1 -e 20`.

@@ -52,15 +52,15 @@ Usage:
   mc [command]
 
 Available Commands:
-  add         Adds a key and value if it doesn't exist
+  add         Adds a key and value, if it doesn't already exist
   completion  Generates bash completion
-  delete      Delete a value from memcached
-  deleteall   Deletes all values from memcached
-  get         Gets one of more values from memcached
+  delete      Delete a value
+  deleteall   Deletes all values
+  get         Gets one of more values
   help        Help about any command
-  replace     Replaces a key and value if it already exist
-  set         Sets a key and value in memcached
-  touch       Touches a key
+  replace     Replaces a key and value, if it already exists
+  set         Sets a key and value
+  touch       Touches a key (updates its expiration time)
   version     Print the version of mc
 
 Flags:

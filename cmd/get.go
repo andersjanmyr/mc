@@ -11,9 +11,9 @@ import (
 
 // getCmd represents the get command
 var getCmd = &cobra.Command{
-	Use:   "get key",
-	Short: "Gets one of more values from memcached",
-	Long: `Gets one of more values from memcached.
+	Use:   "get <key>",
+	Short: "Gets one of more values",
+	Long: `Gets one of more values.
 	Keys should be comma separated without spaces.
 	Values will be returned one on each line in the order the keys were given.`,
 	Args: cobra.MinimumNArgs(1),

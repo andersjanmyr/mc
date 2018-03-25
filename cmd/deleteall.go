@@ -10,8 +10,7 @@ import (
 
 var deleteAllCmd = &cobra.Command{
 	Use:   "deleteall",
-	Short: "Deletes all values from memcached",
-	Long:  `Deletes all values from memcached`,
+	Short: "Deletes all values",
 	Run: func(cmd *cobra.Command, args []string) {
 		memcached := mc.Connect()
 		err := memcached.DeleteAll()

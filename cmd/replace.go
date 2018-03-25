@@ -11,9 +11,8 @@ import (
 )
 
 var replaceCmd = &cobra.Command{
-	Use:   "replace",
-	Short: "Replaces a key and value if it already exist",
-	Long:  `Replaces a key and value if it already exist`,
+	Use:   "replace <key> [value]",
+	Short: "Replaces a key and value, if it already exists",
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		key := args[0]
