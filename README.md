@@ -30,10 +30,13 @@ $ chmod a+x /usr/local/bin/mc
 
 ```
 mc get foo                # Get value for key 'foo'
-mc set foo bar            # Set value for key 'foo' to 'bar'
+mc get foo,bar            # Get values for keys 'foo' and 'bar'
+mc set foo bar            # Set value 'bar' for key 'foo'
 mc set image -f image.png # Set value for key 'image' to contents of file 'image.png'
 mc delete foo             # Delete key (and value) 'foo'
 mc deleteall              # Delete all keys
+mc add foo bar            # Add value 'bar' for key 'foo' if key doesn't exist
+mc replace foo bar        # Replace value for key 'foo' with 'bar'
 mc completion > mc.sh     # Generate bash completion
 ```
 
@@ -52,7 +55,7 @@ Available Commands:
   completion  Generates bash completion
   delete      Delete a value from memcached
   deleteall   Deletes all values from memcached
-  get         Gets a value from memcached
+  get         Gets one of more values from memcached
   help        Help about any command
   replace     Replaces a key and value if it already exist
   set         Sets a key and value in memcached
@@ -100,10 +103,12 @@ SERVER=my.computer.com PORT=5000 go run main.go get dingo
 
 ```
 $ mc get -h
-Get a value from memcached by key
+Gets one of more values from memcached.
+	Keys should be comma separated without spaces.
+	Values will be returned one on each line in the order the keys were given.
 
 Usage:
-  mc get [flags]
+  mc get key [flags]
 
 Flags:
   -h, --help   help for get

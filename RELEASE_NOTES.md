@@ -1,5 +1,9 @@
 # mc, Release Notes
 
+## Release v1.3.1
+
+* Added support for getting multiple keys with `mc get key1,key2`.
+
 ## Release v1.3.0
 
 * Added `mc add` and `mc replace` commands.

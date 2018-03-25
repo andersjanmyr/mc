@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/andersjanmyr/mc/pkg/mc"
 	"github.com/spf13/cobra"
@@ -10,19 +11,29 @@ import (
 
 // getCmd represents the get command
 var getCmd = &cobra.Command{
-	Use:   "get",
-	Short: "Gets a value from memcached",
-	Long:  `Get a value from memcached by key`,
-	Args:  cobra.MinimumNArgs(1),
+	Use:   "get key",
+	Short: "Gets one of more values from memcached",
+	Long: `Gets one of more values from memcached.
+	Keys should be comma separated without spaces.
+	Values will be returned one on each line in the order the keys were given.`,
+	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		memcached := mc.Connect()
-		it, err := memcached.Get(args[0])
+		keys := strings.Split(args[0], ",")
+		results, err := memcached.GetMulti(keys)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
+		for _, k := range keys {
+			it, ok := results[k]
+			if !ok {
+				fmt.Printf("None\n")
+			} else {
+				fmt.Printf("%s\n", string(it.Value))
+			}
+		}
 
-		fmt.Printf("%s\n", string(it.Value))
 	},
 }
 
