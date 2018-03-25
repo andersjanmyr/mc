@@ -7,19 +7,19 @@
 
 ### Links
 
-* [OS X](https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc-osx)
-* [Linux](https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc-linux)
-* [Windows](https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc.exe)
+* [OS X](https://github.com/andersjanmyr/mc/releases/download/v1.3.3/mc-osx)
+* [Linux](https://github.com/andersjanmyr/mc/releases/download/v1.3.3/mc-linux)
+* [Windows](https://github.com/andersjanmyr/mc/releases/download/v1.3.3/mc.exe)
 
 ### Curl
 
 ```
 # OS X
-$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc-osx \
+$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.3.3/mc-osx \
   > /usr/local/bin/mc
 
 # Linux
-$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc-linux \
+$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.3.3/mc-linux \
   > /usr/local/bin/mc
 
 # Make executable
