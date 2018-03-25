@@ -7,19 +7,19 @@
 
 ### Links
 
-* [OS X](https://github.com/andersjanmyr/mc/releases/download/v1.3.2/mc-osx)
-* [Linux](https://github.com/andersjanmyr/mc/releases/download/v1.3.2/mc-linux)
-* [Windows](https://github.com/andersjanmyr/mc/releases/download/v1.3.2/mc.exe)
+* [OS X](https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc-osx)
+* [Linux](https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc-linux)
+* [Windows](https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc.exe)
 
 ### Curl
 
 ```
 # OS X
-$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.3.2/mc-osx \
+$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc-osx \
   > /usr/local/bin/mc
 
 # Linux
-$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.3.2/mc-linux \
+$ curl -L https://github.com/andersjanmyr/mc/releases/download/v1.3.1/mc-linux \
   > /usr/local/bin/mc
 
 # Make executable
@@ -195,4 +195,33 @@ bash completion directory.
 
 # Example
 $ mc completion > mc_completion.sh # Copy to bash completion directory
+```
+
+
+## Development
+
+### Install
+
+```
+go get github.com/andersjanmyr/mc
+```
+
+### Build
+
+```
+# Builds a binary for all platforms
+make build
+```
+
+### Release
+
+Builds all platforms, updates the version in `pkg/mc/version.go`, tags the
+version in git, and uploads the binaries to Github releases. The changes are
+not pushed to the remote.
+
+```
+# Ensure that you have updated the RELEASE_NOTES.md with information about the
+release
+# The release will fail if this is not included.
+make release VERSION=v.1.3.2
 ```
