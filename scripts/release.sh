@@ -19,6 +19,8 @@ if ! [[ "$new_version" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
   exit 1
 fi
 
+description=$(awk "/^##.*$new_version/{flag=1;next} /^##/{flag=0} flag" ./RELEASE_NOTES.md)
+
 check_github_release_config() {
   if ! github-release edit \
     --user andersjanmyr \

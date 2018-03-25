@@ -16,8 +16,6 @@ if ! grep $new_version ./RELEASE_NOTES.md; then
   exit 1
 fi
 
-description=$(awk "/^#.*$new_version/{flag=1;next}/^#/{flag=0}flag" ./RELEASE_NOTES.md)
-
 if ! git diff --quiet HEAD; then
   echoerr "Cannot create release with a dirty repo."
   echoerr "Commit or stash changes and try again."
