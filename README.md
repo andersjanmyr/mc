@@ -37,6 +37,7 @@ mc delete foo             # Delete key (and value) 'foo'
 mc deleteall              # Delete all keys
 mc add foo bar            # Add value 'bar' for key 'foo' if key doesn't exist
 mc replace foo bar        # Replace value for key 'foo' with 'bar'
+mc touch foo -e 30        # Set key 'foo's expiration time to 30 seconds
 mc completion > mc.sh     # Generate bash completion
 ```
 
@@ -59,6 +60,7 @@ Available Commands:
   help        Help about any command
   replace     Replaces a key and value if it already exist
   set         Sets a key and value in memcached
+  touch       Touches a key
   version     Print the version of mc
 
 Flags:
@@ -173,6 +175,16 @@ Flags:
   -f, --file string        Filename containing the value
   -h, --help               help for replace
 
+### Touch
+
+Touches a key (updates it expiration time).
+
+Usage:
+  mc touch key [flags]
+
+Flags:
+  -e, --expiration int32   Expiration time for this key
+  -h, --help               help for touch
 
 ### Completion
 

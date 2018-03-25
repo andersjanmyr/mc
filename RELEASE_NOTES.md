@@ -1,5 +1,9 @@
 # mc, Release Notes
 
+## Release v1.3.2
+
+* Added support for touching a key with `mc touch key1 -e 20`.
+
 ## Release v1.3.1
 
 * Added support for getting multiple keys with `mc get key1,key2`.
