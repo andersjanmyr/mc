@@ -106,12 +106,11 @@ SERVER=my.computer.com PORT=5000 go run main.go get dingo
 
 ```
 $ mc get -h
-Gets one of more values from memcached.
-	Keys should be comma separated without spaces.
-	Values will be returned one on each line in the order the keys were given.
+Gets one of more values.
+	Keys should be comma separated without spaces. If no keys have values, get will exit with an error status. Multiple values will be returned one on each line in the order the keys were given. Missing keys will have the value key:none
 
 Usage:
-  mc get key [flags]
+  mc get <key(s)> [flags]
 
 Flags:
   -h, --help   help for get

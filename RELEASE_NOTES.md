@@ -1,5 +1,9 @@
 # mc, Release Notes
 
+## Release v1.4.1
+
+* Use get for single key and get many for multiple keys
+
 ## Release v1.4.0
 
 * Added support reading value from stdin for `set`, `add`, and `replace`.
