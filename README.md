@@ -2,6 +2,15 @@
 
 ## Installation
 
+### Homebrew Installation on OS X
+
+```
+$ brew tap andersjanmyr/mc
+$ brew install mc
+```
+
+### Other Installation
+
 `mc` is a single binary. Install it by right-clicking and `Save as...` or with
 `curl`.
 

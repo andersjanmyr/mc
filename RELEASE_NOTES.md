@@ -1,5 +1,9 @@
 # mc, Release Notes
 
+## Release v1.4.2
+
+* Added homebrew installation formula.
+
 ## Release v1.4.1
 
 * Use get for single key and get many for multiple keys
