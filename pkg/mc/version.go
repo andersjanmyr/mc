@@ -1,3 +1,3 @@
 package mc
 
-const Version = "v1.4.1"
+const Version = "v1.4.2"
