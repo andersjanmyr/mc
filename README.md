@@ -6,7 +6,7 @@
 
 ```
 $ brew tap andersjanmyr/mc
-# To avoid installing midnight commander use full tab path.
+# To avoid installing midnight commander, use full tap path.
 $ brew install andersjanmyr/homebrew-tap/mc
 ```
 
