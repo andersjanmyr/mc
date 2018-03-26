@@ -1,5 +1,9 @@
 # mc, Release Notes
 
+## Release v1.4.3
+
+* Updated homebrew installation formula.
+
 ## Release v1.4.2
 
 * Added homebrew installation formula.

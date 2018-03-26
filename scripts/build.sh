@@ -11,8 +11,10 @@ ln -s ${PWD} $GOPATH/src/${REPO_PATH}
 
 eval $(go env)
 go get \
-  github.com/spf13/cobra \
   github.com/bradfitz/gomemcache/memcache \
-  github.com/pkg/errors
+  github.com/mitchellh/go-homedir \
+  github.com/pkg/errors \
+  github.com/spf13/cobra \
+  github.com/spf13/viper
 
 CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags '-s' -o bin/mc ${REPO_PATH}
