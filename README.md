@@ -5,7 +5,7 @@
 ### Homebrew Installation on OS X
 
 ```
-$ brew tap andersjanmyr/mc
+$ brew tap andersjanmyr/tap
 # To avoid installing midnight commander, use full tap path.
 $ brew install andersjanmyr/homebrew-tap/mc
 ```
