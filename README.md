@@ -107,7 +107,7 @@ port: 5000
 Environment variables are also supported: `SERVER` and `PORT`.
 
 ```
-SERVER=my.computer.com PORT=5000 go run main.go get dingo
+SERVER=my.computer.com PORT=5000 mc get dingo
 ```
 
 ## Extended Usage
@@ -163,6 +163,8 @@ Usage:
 
 ### Add
 
+```
+$ mc add -h
 Adds a key and value if it doesn't exist
 
 Usage:
@@ -172,9 +174,12 @@ Flags:
   -e, --expiration int32   Expiration time for this key
   -f, --file string        Filename containing the value
   -h, --help               help for add
+```
 
 ### Replace
 
+```
+$ mc replace -h
 Replaces a key and value if it already exist
 
 Usage:
@@ -184,9 +189,12 @@ Flags:
   -e, --expiration int32   Expiration time for this key
   -f, --file string        Filename containing the value
   -h, --help               help for replace
+```
 
 ### Touch
 
+```
+$ mc touch -h
 Touches a key (updates it expiration time).
 
 Usage:
@@ -195,6 +203,7 @@ Usage:
 Flags:
   -e, --expiration int32   Expiration time for this key
   -h, --help               help for touch
+```
 
 ### Completion
 
